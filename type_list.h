@@ -60,4 +60,9 @@ struct index_of<type_list<head, tail>, T> {
     static constexpr int value = (index_in_tail::value == -1) ? -1 : index_in_tail::value + 1;
 };
 
+template<typename list, typename T>
+struct contains {
+    static constexpr bool value = index_of<list, T>::value >= 0;
+};
+
 #endif //TYPELIST_TYPE_LIST_H

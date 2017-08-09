@@ -12,5 +12,8 @@ int main() {
     std::cout << "index of void: " << index_of<types, bool>::value << std::endl;
     std::cout << "index of int: " << index_of<types, long>::value << std::endl;
 
+    std::cout << "list contains bool: " << contains<types, bool>::value << std::endl;
+    std::cout << "list contains int: " << contains<types, long>::value << std::endl;
+
     return 0;
 }
